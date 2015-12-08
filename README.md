@@ -20,7 +20,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+# Default config
+Audience::Api.configure do |config|
+  config.adapter = Faraday.default_adapter
+  config.connection_options = {}
+  config.endpoint = "http://mnd-audience.herokuapp.com"
+end
+
+# Get single resource
+pp Audience::Api.list(25)
+
+# Auto paginate through collection
+Audience::Api.auto_paginate :list_contacts, 2 do |batch|
+  puts batch
+end
+```
+
+### Lists API
+    # get the list by given id
+    Audience::Api.list(25)
+
+    # all lists for country
+    Audience::Api.country_lists("de")
+
+### Contacts API
+    # get the contact by given id
+    Audience::Api.contact(25)
+
+    # all contacts for given list_id
+    Audience::Api.list_contacts(19)
 
 ## Development
 
