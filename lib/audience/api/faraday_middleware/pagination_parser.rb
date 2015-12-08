@@ -28,7 +28,7 @@ module Audience::Api::FaradayMiddleware
     end
 
     def header(name)
-      @env.response_headers[name]
+      @env[:response_headers][name]
     end
   end
 end
