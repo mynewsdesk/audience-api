@@ -22,10 +22,13 @@ Or install it yourself as:
 
 ```
 # Default config
+# User and Password are required!
 Audience::Api.configure do |config|
   config.adapter = Faraday.default_adapter
   config.connection_options = {}
   config.endpoint = "http://mnd-audience.herokuapp.com"
+  config.user = ENV["MND_AUDIENCE_API_USER"]
+  config.password =  ENV["MND_AUDIENCE_API_PASSWORD"]
 end
 
 # Get single resource

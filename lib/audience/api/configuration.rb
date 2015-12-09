@@ -11,6 +11,8 @@ module Audience
           :adapter,
           :connection_options,
           :endpoint,
+          :user,
+          :password,
       ].freeze
 
       # The adapter that will be used to connect if none is set
@@ -51,6 +53,8 @@ module Audience
         self.adapter            = DEFAULT_ADAPTER
         self.connection_options = DEFAULT_CONNECTION_OPTIONS
         self.endpoint           = DEFAULT_ENDPOINT
+        self.user               = ""
+        self.password           = ""
       end
     end
   end

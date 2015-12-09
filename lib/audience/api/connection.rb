@@ -16,7 +16,9 @@ module Audience
         }
 
         Faraday::Connection.new(options) do |connection|
+          connection.basic_auth user, password
           connection.use Faraday::Request::UrlEncoded
+          connection.use Faraday::Response::RaiseError
           connection.use Audience::Api::FaradayMiddleware::PaginationParser
           connection.use ::FaradayMiddleware::Mashify
           connection.use Faraday::Response::ParseJson
