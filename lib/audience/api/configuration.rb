@@ -26,7 +26,7 @@ module Audience
       # The endpoint that will be used to connect if none is set
       #
       # @note There is no reason to use any other endpoint at this time
-      DEFAULT_ENDPOINT = "http://mnd-audience.herokuapp.com".freeze
+      DEFAULT_ENDPOINT = "https://mnd-audience.herokuapp.com".freeze
 
       # @private
       attr_accessor *VALID_OPTIONS_KEYS
