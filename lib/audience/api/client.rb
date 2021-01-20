@@ -32,6 +32,7 @@ module Audience
 
       Dir[File.expand_path("../client/*.rb", __FILE__)].each { |f| require f }
       include Audience::Api::Client::Contact
+      include Audience::Api::Client::Gdpr
       include Audience::Api::Client::List
       include Audience::Api::Client::AutoPaginate
     end
