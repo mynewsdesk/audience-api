@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    audience-api (0.1.3)
+    audience-api (1.1.0)
       faraday (~> 1.0)
       faraday_middleware (~> 1.0)
       hashie
@@ -11,8 +11,11 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
-    faraday (1.0.1)
+    faraday (1.3.0)
+      faraday-net_http (~> 1.0)
       multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    faraday-net_http (1.0.1)
     faraday_middleware (1.0.0)
       faraday (~> 1.0)
     hashie (4.1.0)
@@ -32,6 +35,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    ruby2_keywords (0.0.4)
 
 PLATFORMS
   ruby
@@ -43,4 +47,4 @@ DEPENDENCIES
   rspec (~> 3.0)
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
