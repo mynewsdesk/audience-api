@@ -3,13 +3,15 @@ module Audience
     class Client
       module Gdpr
         ENDPOINT = "gdpr".freeze
-        # Performs a gdpr anonymisation for the given email address
+        # Performs a gdpr removal for the given email address
         #
         # Example:
-        #   Audience::Api.gdpr_anonymize("email@example.com")
+        #   Audience::Api.gdpr_removal("email@example.com")
         #
-        def gdpr_anonymize(email)
-          response = delete "#{ENDPOINT}/anonymize/?email=#{email}"
+        def gdpr_removal(email)
+          raise "No email given!" if email.blank?
+
+          response = post "#{ENDPOINT}/removal/?email=#{email}"
           response.body
         end
       end

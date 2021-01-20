@@ -11,10 +11,10 @@ module Audience
         end
       end
 
-      # Perform an HTTP DELETE request
-      def delete(path, options={})
+      # Perform an HTTP POST request
+      def post(path, options={})
         options["format"] = "json"
-        connection.delete do |request|
+        connection.post do |request|
           request.url URI.encode(path)
           request.params.merge! options
         end
