@@ -10,6 +10,15 @@ module Audience
           request.params.merge! options
         end
       end
+
+      # Perform an HTTP POST request
+      def post(path, options={})
+        options["format"] = "json"
+        connection.post do |request|
+          request.url URI.encode(path)
+          request.params.merge! options
+        end
+      end
     end
   end
 end
