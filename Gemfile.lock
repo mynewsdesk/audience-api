@@ -21,7 +21,7 @@ GEM
     hashie (4.1.0)
     multi_json (1.15.0)
     multipart-post (2.1.1)
-    rake (10.4.2)
+    rake (13.0.3)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -43,7 +43,7 @@ PLATFORMS
 DEPENDENCIES
   audience-api!
   bundler (~> 1.10)
-  rake (~> 10.0)
+  rake (~> 13.0)
   rspec (~> 3.0)
 
 BUNDLED WITH
