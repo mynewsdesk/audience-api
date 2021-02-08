@@ -12,11 +12,12 @@ module Audience
       end
 
       # Perform an HTTP POST request
-      def post(path, options={})
+      def post(path, body = nil, options={})
         options["format"] = "json"
         connection.post do |request|
           request.url URI.encode(path)
           request.params.merge! options
+          request.body = body if body
         end
       end
     end

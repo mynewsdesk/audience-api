@@ -11,7 +11,10 @@ module Audience
         def gdpr_removal(email)
           raise "No email given!" if email.blank?
 
-          response = post "#{ENDPOINT}/removal/?email=#{email}"
+          response = post(
+            "#{ENDPOINT}/removal/",
+            {email: email}.to_json
+          )
           response.body
         end
       end
